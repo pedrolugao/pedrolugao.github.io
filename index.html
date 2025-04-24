@@ -35,17 +35,32 @@
 
     <div class="content">
         <h3 id="about">About</h3>
-        <p>I am a doctoral student currently working with quantum computing algorithms based on quantum walks. Enrolled on the Computational Modelling graduate program of the National Laboratory of Scientific Computing (LNCC) - Brazil. </p>
-        <p>With a background in Math and Computer Science, I enjoy all kind of work that mixes analytical theory with applicable computing. I also work with mathematical modeling and numerical simulations on the context of bioinformatics, having published papers on the spatial and temporal dynamics of the <i>Aedes aegypti</i> mosquito.</p>
-        
+        <p>I am a Doctor in Computational Modelling and specialize in quantum computing algorithms, particularly those based on quantum walks. I also have a strong interest in artificial intelligence and its diverse applications.</p>  
+        <p>With a solid background in Mathematics and Computer Science, I’m passionate about work that bridges analytical theory and practical computation. Additionally, I engage in mathematical modeling and numerical simulations in the field of bioinformatics, with published research focused on the spatial and temporal dynamics of the <i>Aedes aegypti</i> mosquito.</p>
+
         <h3 id="timeline">Timeline</h3>
         <ul>
-            <li>2020 - Currently : Doctoral degree on Computational Modelling - LNCC</li>
+            <li>2024 - current: Professor of Computational Engineering at CEFET-RJ/Petrópolis</li>
+            <li>2020 - 2023 : Doctoral degree on Computational Modelling - National Laboratory of Scientific Computing (LNCC)</li>
             <li>2018 - 2019 : Master's degree on Mathematics - Federal University of Juiz de Fora (UFJF)</li>
             <li>2015 - 2019 : Undergraduate degree on Computer Science - UFJF</li>
         </ul>
 
         <h3 id="works">Published works</h3>
+        <div class="work">
+            <h5>Quantum search by continuous-time quantum walk on t-designs</h5>
+            <p>This work examines the time complexity of quantum search algorithms on combinatorial t-designs with multiple marked elements using the continuous-time quantum walk. Through a detailed exploration of t-designs and their incidence matrices, we identify a subset of bipartite graphs that are conducive to success compared to random-walk-based search algorithms. These graphs have adjacency matrices with eigenvalues and eigenvectors that can be determined algebraically and are also suitable for analysis in the multiple-marked vertex scenario. We show that the continuous-time quantum walk on certain symmetric t-designs achieves an optimal running time of O(sqrt(N))
+                , where n is the number of points and blocks, even when accounting for an arbitrary number of marked elements. Upon examining two primary configurations of marked elements distributions, we observe that the success probability is consistently o(1), but it approaches 1 asymptotically in certain scenarios.</p>
+            <p>Published on <a href="https://link.springer.com/article/10.1007/s11128-024-04355-4">Quantum Information Processing</a></p>
+            <a href="https://arxiv.org/abs/2310.14141">Arxiv pdf</a>
+        </div>
+        <div class="work">
+            <h5>Multimarked Spatial Search by Continuous-Time Quantum Walk</h5>
+            <p>The quantum-walk-based spatial search problem aims to find a marked vertex using a quantum walk on a graph with marked vertices. We describe a framework for determining the computational complexity of spatial search by continuous-time quantum walk on arbitrary graphs by providing a recipe for finding the optimal running time and the success probability of the algorithm. The quantum walk is driven by a Hamiltonian derived from the adjacency matrix of the graph modified by the presence of the marked vertices. The success of our framework depends on the knowledge of the eigenvalues and eigenvectors of the adjacency matrix. The spectrum of the Hamiltonian is subsequently obtained from the roots of the determinant of a real symmetric matrix M, the dimensions of which depend on the number of marked vertices. The eigenvectors are determined from a basis of the kernel of M. We show each step of the framework by solving the spatial searching problem on the Johnson graphs with a fixed diameter and with two marked vertices. Our calculations show that the optimal running time is O(sqrt(N))
+                with an asymptotic probability of 1+o(1), where N is the number of vertices.</p>
+            <p>Published on <a href="https://dl.acm.org/doi/10.1145/3706064">ACM Transactions on Quantum Computing</a></p>
+            <a href="https://arxiv.org/abs/2203.14384">Arxiv pdf</a>
+        </div>
         <div class="work">
             <h5>Quantum-walk-based search algorithms with multiple marked vertices</h5>
             <p>The quantum walk is a powerful tool to develop quantum algorithms, which usually are based on searching for a vertex in a graph with multiple marked vertices, with Ambainis's quantum algorithm for solving the element distinctness problem being the most shining example. In this work, we address the problem of calculating analytical expressions of the time complexity of finding a marked vertex using quantum-walk-based search algorithms with multiple marked vertices on arbitrary graphs, extending previous analytical methods based on Szegedy's quantum walk, which can be applied only to bipartite graphs. Two examples based on the coined quantum walk on two-dimensional lattices and hypercubes show the details of our method.</p>
