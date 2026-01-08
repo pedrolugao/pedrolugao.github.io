@@ -4,85 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-
     <title>Pedro H. G. Lugão</title>
 </head>
-<body>
-    <sidebar>
-        <img src="img/avatar.jpeg"  class= "avatar">
-        <h2>Pedro H. G. Lugão</h2>
-        <div class="networks">
-            <ul>
-                <li><a href="https://scholar.google.com/citations?user=uQkC4-EAAAAJ&hl=pt-BR" class="ai ai-google-scholar"></a></li>
-                <li><a href="http://lattes.cnpq.br/7369911028082703" class="ai ai-lattes"></a></li>
-                <li><a href="https://www.linkedin.com/in/pedro-henrique-gasparetto-lug%C3%A3o-4066a84b/" class="fa fa-linkedin"></a></li>
-                <li> <a href="https://github.com/pedrolugao" class="fa fa-github"></a></li>    
-            </ul>
-        </div>
-        <div class="links">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#timeline">Timeline</a></li>
-                <li><a href="#works">Papers</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-
-    </sidebar>
-
-    <div class="content">
-        <h3 id="about">About</h3>
-        <p>I am a Doctor in Computational Modelling and specialize in quantum computing algorithms, particularly those based on quantum walks. I also have a strong interest in artificial intelligence and its diverse applications.</p>  
-        <p>With a solid background in Mathematics and Computer Science, I’m passionate about work that bridges analytical theory and practical computation. Additionally, I engage in mathematical modeling and numerical simulations in the field of bioinformatics, with published research focused on the spatial and temporal dynamics of the <i>Aedes aegypti</i> mosquito.</p>
-
-        <h3 id="timeline">Timeline</h3>
-        <ul>
-            <li>2024 - current: Professor of Computational Engineering at CEFET-RJ/Petrópolis</li>
-            <li>2020 - 2023 : Doctoral degree on Computational Modelling - National Laboratory of Scientific Computing (LNCC)</li>
-            <li>2018 - 2019 : Master's degree on Mathematics - Federal University of Juiz de Fora (UFJF)</li>
-            <li>2015 - 2019 : Undergraduate degree on Computer Science - UFJF</li>
-        </ul>
-
-        <h3 id="works">Published works</h3>
-        <div class="work">
-            <h5>Quantum search by continuous-time quantum walk on t-designs</h5>
-            <p>This work examines the time complexity of quantum search algorithms on combinatorial t-designs with multiple marked elements using the continuous-time quantum walk. Through a detailed exploration of t-designs and their incidence matrices, we identify a subset of bipartite graphs that are conducive to success compared to random-walk-based search algorithms. These graphs have adjacency matrices with eigenvalues and eigenvectors that can be determined algebraically and are also suitable for analysis in the multiple-marked vertex scenario. We show that the continuous-time quantum walk on certain symmetric t-designs achieves an optimal running time of O(sqrt(N))
-                , where n is the number of points and blocks, even when accounting for an arbitrary number of marked elements. Upon examining two primary configurations of marked elements distributions, we observe that the success probability is consistently o(1), but it approaches 1 asymptotically in certain scenarios.</p>
-            <p>Published on <a href="https://link.springer.com/article/10.1007/s11128-024-04355-4">Quantum Information Processing</a></p>
-            <a href="https://arxiv.org/abs/2310.14141">Arxiv pdf</a>
-        </div>
-        <div class="work">
-            <h5>Multimarked Spatial Search by Continuous-Time Quantum Walk</h5>
-            <p>The quantum-walk-based spatial search problem aims to find a marked vertex using a quantum walk on a graph with marked vertices. We describe a framework for determining the computational complexity of spatial search by continuous-time quantum walk on arbitrary graphs by providing a recipe for finding the optimal running time and the success probability of the algorithm. The quantum walk is driven by a Hamiltonian derived from the adjacency matrix of the graph modified by the presence of the marked vertices. The success of our framework depends on the knowledge of the eigenvalues and eigenvectors of the adjacency matrix. The spectrum of the Hamiltonian is subsequently obtained from the roots of the determinant of a real symmetric matrix M, the dimensions of which depend on the number of marked vertices. The eigenvectors are determined from a basis of the kernel of M. We show each step of the framework by solving the spatial searching problem on the Johnson graphs with a fixed diameter and with two marked vertices. Our calculations show that the optimal running time is O(sqrt(N))
-                with an asymptotic probability of 1+o(1), where N is the number of vertices.</p>
-            <p>Published on <a href="https://dl.acm.org/doi/10.1145/3706064">ACM Transactions on Quantum Computing</a></p>
-            <a href="https://arxiv.org/abs/2203.14384">Arxiv pdf</a>
-        </div>
-        <div class="work">
-            <h5>Quantum-walk-based search algorithms with multiple marked vertices</h5>
-            <p>The quantum walk is a powerful tool to develop quantum algorithms, which usually are based on searching for a vertex in a graph with multiple marked vertices, with Ambainis's quantum algorithm for solving the element distinctness problem being the most shining example. In this work, we address the problem of calculating analytical expressions of the time complexity of finding a marked vertex using quantum-walk-based search algorithms with multiple marked vertices on arbitrary graphs, extending previous analytical methods based on Szegedy's quantum walk, which can be applied only to bipartite graphs. Two examples based on the coined quantum walk on two-dimensional lattices and hypercubes show the details of our method.</p>
-            <p>Published on <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.103.062202">Physical Review A</a></p>
-            <a href="https://arxiv.org/pdf/2103.12878.pdf">Arxiv pdf</a>
-        </div>
-        <div class="work">
-            <h5>Modeling and simulation of the spatial population dynamics of the Aedes aegypti mosquito with an insecticide application</h5>
-            <p>The Aedes aegypti mosquito is the primary vector for several diseases. Its control requires a better understanding of the mosquitoes’ live cycle, including the spatial dynamics. Several models address this issue. However, they rely on many hard to measure parameters. This work presents a model describing the spatial population dynamics of Aedes aegypti mosquitoes using partial differential equations (PDEs) relying on a few parameters.</p>
-            <p>Published on <a href="https://link.springer.com/article/10.1186/s13071-020-04426-2">Parasites & Vectors</a> (Open Access)</p>
-        </div>
-        <div class="work">
-            <h5>Impact of temperature variation on spatial population dynamics of Aedes aegypti</h5>
-            <p>This work aims to study a model of partial differential equations (PDE) for the population dynamics of the Aedes aegypti mosquito. We propose a numerical resolution using finite volumes. We evaluated the influence of temperature in modeling the parameters and the results for simulations at three different temperatures. The obtained results encourage a discussion about the importance of prevention during the rainy season and compare the cases of dengue during the first thirty epidemiological weeks of two thousand and nineteen.</p>
-            <p>Published on <a href="https://periodicos.ifpr.edu.br/index.php?journal=MundiETG&page=article&op=view&path%5B%5D=1296">Revista Mundi</a> (Open Access)</p>
-        </div>
-
-        <h3 id="contact">Contact info</h3>
-        <p>E-mail: pedrolug@lncc.br</p>
-        
+<body class="light-theme">
+    <div class="toggles">
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <button id="lang-toggle" class="toggle-btn" aria-label="Toggle language">
+            <span class="lang-text">PT</span>
+        </button>
     </div>
 
+    <main class="container">
+        <h1 class="name">Pedro H. G. Lugão</h1>
 
+        <p class="email">
+            <a href="mailto:pedrolug@lncc.br">pedrogasparetto@ymail.com</a>
+        </p>
+
+        <div class="about" id="about-en">
+            <p>I am a Doctor in Computational Modelling and specialize in quantum computing algorithms, particularly those based on quantum walks. I also have a strong interest in artificial intelligence and its diverse applications.</p>
+            <p>With a solid background in Mathematics and Computer Science, I'm passionate about work that bridges analytical theory and practical computation. Additionally, I engage in mathematical modeling and numerical simulations in the field of bioinformatics, with published research focused on the spatial and temporal dynamics of the <i>Aedes aegypti</i> mosquito.</p>
+        </div>
+
+        <div class="about" id="about-pt" style="display: none;">
+            <p>Sou Doutor em Modelagem Computacional e me especializo em algoritmos de computação quântica, particularmente aqueles baseados em passeios quânticos. Também tenho forte interesse em inteligência artificial e suas diversas aplicações.</p>
+            <p>Com sólida formação em Matemática e Ciência da Computação, sou apaixonado por trabalhos que conectam teoria analítica e computação prática. Além disso, atuo em modelagem matemática e simulações numéricas no campo da bioinformática, com pesquisas publicadas focadas na dinâmica espaço-temporal do mosquito <i>Aedes aegypti</i>.</p>
+        </div>
+
+        <nav class="links">
+            <a href="#" class="link-item" id="link-classes-en">Classes</a>
+            <a href="https://scholar.google.com/citations?user=uQkC4-EAAAAJ&hl=pt-BR" class="link-item" id="link-papers-en">Papers</a>
+            <a href="http://lattes.cnpq.br/7369911028082703" class="link-item" id="link-vitae-en">Vitae</a>
+            <a href="#" class="link-item" id="link-blog-en">Blog</a>
+        </nav>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

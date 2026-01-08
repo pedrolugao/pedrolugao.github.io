@@ -1,126 +1,202 @@
-body{
-    font-size: x-large;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.avatar {
-    vertical-align: middle;
-    width: 120px;
-    height: 120px;
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --secondary-text: #4a4a4a;
+    --link-color: #2563eb;
+    --link-hover: #1d4ed8;
+    --toggle-bg: #e5e7eb;
+    --toggle-color: #1a1a1a;
+}
+
+body.dark-theme {
+    --bg-color: #0f0f0f;
+    --text-color: #e5e5e5;
+    --secondary-text: #a3a3a3;
+    --link-color: #60a5fa;
+    --link-hover: #93c5fd;
+    --toggle-bg: #262626;
+    --toggle-color: #e5e5e5;
+}
+
+body {
+    font-family: 'CMU Serif', 'Computer Modern Serif', Georgia, serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggles {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.toggle-btn {
+    background-color: var(--toggle-bg);
+    color: var(--toggle-color);
+    border: none;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-  }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
 
-@media (min-device-width:700px) {
-    sidebar{
-        height: 100%; /* Full-height: remove this if you want "auto" height */
-        width: 20%; /* Set the width of the sidebar */
-        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-        z-index: 1; /* Stay on top */
-        top: 0; /* Stay at the top */
-        left: 0;
-        background-color: rgb(56, 50, 68); /* Black */
-        overflow-x: hidden; /* Disable horizontal scroll */
-        padding-top: 20px;
-        text-align: center;
+.toggle-btn:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.toggle-btn:active {
+    transform: scale(0.95);
+}
+
+.theme-icon {
+    font-size: 20px;
+}
+
+.lang-text {
+    font-size: 14px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 100px 30px 60px;
+    text-align: center;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.email {
+    margin-bottom: 40px;
+}
+
+.email a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.email a:hover {
+    color: var(--link-color);
+}
+
+.about {
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.about p {
+    margin-bottom: 16px;
+    color: var(--secondary-text);
+    font-size: 1.05rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.link-item {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.link-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--link-hover);
+    transition: width 0.3s ease;
+}
+
+.link-item:hover {
+    color: var(--link-hover);
+}
+
+.link-item:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 80px 20px 40px;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .email a {
+        font-size: 1rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .links {
+        gap: 20px;
+    }
+
+    .link-item {
+        font-size: 1rem;
+    }
+
+    .toggles {
+        top: 15px;
+        right: 15px;
+        gap: 8px;
+    }
+
+    .toggle-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 }
 
-
-
-sidebar h2{
-    color: rgb(255, 255, 255);
-}
-
-.networks ul{
-    padding-left:0px;
-    display:block;
-}
-
-.networks ul li{
-    list-style-type: none;
-    display:inline-block;
-    padding: 0px 2px;
-}
-
-.links ul{
-    padding-left:0px;
-    list-style-type: none;
-}
-
-sidebar a{
-    color: whitesmoke;
-    text-decoration:none;
-}
-
-
-
-@media (min-device-width:700px) {
-    .content {
-        margin-left: 20%; /* Same as the width of the sidebar */
-        padding: 0px 10px;
-        text-align: justify;
-        font-size: x-large;
-    }
-}
-
-
-body{
-    background-color: whitesmoke;
-    
-}
-
-.work{
-    border: 1px dashed gray;
-    padding: 10px;
-    padding-top: 0px;
-    margin-top: 0px;
-}
-h5{
-    margin-top: 10px;
-}
-
-@media (max-width:700px) {
-    .avatar{
-        display: none;
-    }
-    sidebar{
-        height: 125px; /* Full-height: remove this if you want "auto" height */
-        width: 100%; /* Set the width of the sidebar */
-        top: 0; /* Stay at the top */
-        left: 0;
-        position:absolute; 
-        z-index: 0; 
-       
-        background-color: rgb(56, 50, 68); /* Black */
-        padding-top: 0px;
-        text-align: center;
+@media (max-width: 480px) {
+    .links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
     }
 
-    .content {
-        margin-left: 0%;
-        margin-top:130px;
-        text-align: justify;
-        font-size: x-large;
+    .name {
+        font-size: 1.75rem;
     }
-
-    h2{
-        margin-bottom: 1px;
-        margin-top: 10px;
-    }
-
-    .networks ul{
-        padding-left:0px;
-        margin-top: 0px;;
-        display:inline;
-    }
-
-    .links ul{
-        padding-left:0px;
-        display:inline;
-        list-style-type: none;
-    }
-    .links li{
-        display: inline-block;
-        padding: 2px 2px;
-    }
-
 }
