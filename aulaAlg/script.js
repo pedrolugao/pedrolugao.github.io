@@ -103,7 +103,7 @@ function renderSteps() {
     ? ['Nenhum passo executado ainda.']
     : moveHistory.map((move, index) => {
       const actionNumber = index + 1;
-      return `Peça ${pieceName(move.piece)} deslizou da casa ${move.from} para a casa ${move.to}.`;
+      return `Peça ${pieceName(move.piece)} ${move.type} da casa ${move.from} para a casa ${move.to}.`;
     });
 
   stepsListElement.innerHTML = '';
