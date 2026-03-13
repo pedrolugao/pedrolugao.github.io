@@ -40,7 +40,6 @@ const blogLink = document.getElementById('link-blog-en');
 const translations = {
     en: {
         classes: 'Materials',
-        materialItemSubtitle: 'Class materials',
         papers: 'Papers',
         vitae: 'Vitae',
         blog: 'Blog',
@@ -48,7 +47,6 @@ const translations = {
     },
     pt: {
         classes: 'Materiais',
-        materialItemSubtitle: 'Materiais da disciplina',
         papers: 'Artigos',
         vitae: 'Currículo',
         blog: 'Blog',
