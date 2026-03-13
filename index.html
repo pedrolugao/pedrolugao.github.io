@@ -36,7 +36,27 @@
         </div>
 
         <nav class="links">
-            <a href="aulaAlg/" class="link-item" id="link-classes-en">Materials</a>
+            <div class="dropdown">
+                <button
+                    type="button"
+                    class="link-item dropdown-toggle"
+                    id="materials-toggle"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-controls="materials-menu"
+                >
+                    <span id="link-classes-en">Materials</span>
+                    <span class="dropdown-caret" aria-hidden="true">▾</span>
+                </button>
+
+                <div class="dropdown-menu" id="materials-menu" role="menu" aria-labelledby="materials-toggle">
+                    <a href="aulaAlg/" class="dropdown-link" role="menuitem">
+                        <span class="dropdown-link-title">Jogo de pedras</span>
+                        <span class="dropdown-link-subtitle" id="materials-item-subtitle">Algoritmos</span>
+                    </a>
+                </div>
+            </div>
+
             <a href="https://scholar.google.com/citations?user=uQkC4-EAAAAJ&hl=pt-BR" class="link-item" id="link-papers-en">Papers</a>
             <a href="http://lattes.cnpq.br/7369911028082703" class="link-item" id="link-vitae-en">Vitae</a>
             <!-- <a href="#" class="link-item" id="link-blog-en">Blog</a> -->

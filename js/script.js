@@ -29,10 +29,18 @@ const langToggle = document.getElementById('lang-toggle');
 const langText = document.querySelector('.lang-text');
 const aboutEn = document.getElementById('about-en');
 const aboutPt = document.getElementById('about-pt');
+const materialsToggle = document.getElementById('materials-toggle');
+const materialsWrapper = materialsToggle?.closest('.dropdown');
+const materialsLabel = document.getElementById('link-classes-en');
+const materialsItemSubtitle = document.getElementById('materials-item-subtitle');
+const papersLink = document.getElementById('link-papers-en');
+const vitaeLink = document.getElementById('link-vitae-en');
+const blogLink = document.getElementById('link-blog-en');
 
 const translations = {
     en: {
         classes: 'Materials',
+        materialItemSubtitle: 'Class materials',
         papers: 'Papers',
         vitae: 'Vitae',
         blog: 'Blog',
@@ -40,6 +48,7 @@ const translations = {
     },
     pt: {
         classes: 'Materiais',
+        materialItemSubtitle: 'Materiais da disciplina',
         papers: 'Artigos',
         vitae: 'Currículo',
         blog: 'Blog',
@@ -59,6 +68,26 @@ langToggle.addEventListener('click', () => {
     toggleLanguage();
 });
 
+materialsToggle?.addEventListener('click', () => {
+    const isOpen = materialsWrapper.classList.toggle('open');
+    materialsToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+document.addEventListener('click', (event) => {
+    if (!materialsWrapper || materialsWrapper.contains(event.target)) {
+        return;
+    }
+
+    closeMaterialsDropdown();
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeMaterialsDropdown();
+        materialsToggle?.focus();
+    }
+});
+
 function toggleLanguage() {
     if (currentLang === 'en') {
         currentLang = 'pt';
@@ -73,14 +102,38 @@ function toggleLanguage() {
     }
 
     // Update link texts
-    document.getElementById('link-classes-en').textContent = translations[currentLang].classes;
-    document.getElementById('link-papers-en').textContent = translations[currentLang].papers;
-    document.getElementById('link-vitae-en').textContent = translations[currentLang].vitae;
-    document.getElementById('link-blog-en').textContent = translations[currentLang].blog;
+    if (materialsLabel) {
+        materialsLabel.textContent = translations[currentLang].classes;
+    }
+
+    if (materialsItemSubtitle) {
+        materialsItemSubtitle.textContent = translations[currentLang].materialItemSubtitle;
+    }
+
+    if (papersLink) {
+        papersLink.textContent = translations[currentLang].papers;
+    }
+
+    if (vitaeLink) {
+        vitaeLink.textContent = translations[currentLang].vitae;
+    }
+
+    if (blogLink) {
+        blogLink.textContent = translations[currentLang].blog;
+    }
 
     // Update language toggle button
     langText.textContent = translations[currentLang].langCode;
 
     // Save preference
     localStorage.setItem('language', currentLang);
+}
+
+function closeMaterialsDropdown() {
+    if (!materialsWrapper || !materialsToggle) {
+        return;
+    }
+
+    materialsWrapper.classList.remove('open');
+    materialsToggle.setAttribute('aria-expanded', 'false');
 }
