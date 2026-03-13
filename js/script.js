@@ -58,7 +58,7 @@ let currentLang = 'pt';
 
 // Load saved language preference
 const savedLang = localStorage.getItem('language');
-if (savedLang === 'pt') {
+if (savedLang === 'en') {
     toggleLanguage();
 }
 
