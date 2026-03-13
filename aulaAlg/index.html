@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troca de Peças</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Troca de Peças</h1>
+      <p class="subtitle">
+        Arraste as peças com o mouse para inverter as posições das peças pretas e brancas.
+      </p>
+    </section>
+
+    <section class="game-panel">
+      <div class="toolbar">
+        <button id="restart-button" type="button">Reiniciar</button>
+        <button id="undo-button" type="button">Desfazer</button>
+      </div>
+
+      <div id="status-message" class="status-message" aria-live="polite">
+        Faça uma jogada válida para começar.
+      </div>
+
+      <div class="board-wrapper">
+        <div id="board" class="board" aria-label="Tabuleiro do jogo"></div>
+      </div>
+
+      <div class="rules">
+        <h2>Regras</h2>
+        <ul>
+          <li>Deslize uma peça para a casa vizinha se ela estiver vazia.</li>
+          <li>Pule exatamente uma peça para a casa seguinte, se ela estiver vazia.</li>
+          <li>Objetivo: deixar as peças brancas à esquerda e as pretas à direita.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="steps-panel">
+      <h2>Passos executados</h2>
+      <ol id="steps-list" class="steps-list"></ol>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
