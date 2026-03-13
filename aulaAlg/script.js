@@ -129,7 +129,8 @@ function renderBoard() {
     slot.appendChild(slotIndex);
 
     slot.addEventListener('dragover', (event) => {
-      if (draggedIndex !== null && isValidMove(draggedIndex, index)) {
+      //removed && isValidMove(draggedIndex, index) from this
+      if (draggedIndex !== null ) {
         event.preventDefault();
       }
     });
