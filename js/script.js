@@ -54,7 +54,7 @@ const translations = {
     }
 };
 
-let currentLang = 'en';
+let currentLang = 'pt';
 
 // Load saved language preference
 const savedLang = localStorage.getItem('language');
