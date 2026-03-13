@@ -56,6 +56,8 @@ const translations = {
 
 let currentLang = 'pt';
 
+document.documentElement.lang = 'pt-BR';
+
 // Load saved language preference
 const savedLang = localStorage.getItem('language');
 if (savedLang === 'en') {
