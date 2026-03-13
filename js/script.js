@@ -32,14 +32,14 @@ const aboutPt = document.getElementById('about-pt');
 
 const translations = {
     en: {
-        classes: 'Classes',
+        classes: 'Materials',
         papers: 'Papers',
         vitae: 'Vitae',
         blog: 'Blog',
         langCode: 'PT'
     },
     pt: {
-        classes: 'Aulas',
+        classes: 'Materiais',
         papers: 'Artigos',
         vitae: 'Currículo',
         blog: 'Blog',
